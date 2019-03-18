@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">complaint-app</string>
+    <string name="login">LOGIN</string>
+    <string name="have_a_complaint">Have a COMPLAINT???</string>
+    <string name="signup_here">Signup Here</string>
+
+    <string name="login_here">LOGIN HERE</string>
+    <string name="signup">SIGNUP</string>
+    <string name="not_yet_registered">not yet registered</string>
+
 </resources>
