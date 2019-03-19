@@ -7,5 +7,16 @@
     <string name="login_here">LOGIN HERE</string>
     <string name="signup">SIGNUP</string>
     <string name="not_yet_registered">not yet registered</string>
+    <string name="nameofstudent">TextView</string>
+    <string name="idno">TextView</string>
+    <string name="email">TextView</string>
+    <string name="mobileno">TextView</string>
+    <string name="password">TextView</string>
+    <string name="button">Button</string>
+    <string name="textview1">TextView</string>
+    <string name="textview2">TextView</string>
+    <string name="textview3">TextView</string>
+    <string name="textview4">TextView</string>
+
 
 </resources>
