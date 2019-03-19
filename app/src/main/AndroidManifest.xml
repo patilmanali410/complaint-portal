@@ -19,12 +19,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".view.signup.signup" />
-        <activity android:name=".view.profile.profile" />
         <activity android:name=".view.login.login" />
         <activity android:name=".view.filecomplaint.filecomplaint" />
         <activity android:name=".view.viewcomplaint.viewcomplaint" />
         <activity android:name=".view.viewstatus.viewstatus" />
-        <activity android:name=".view.ritik.ritiik"></activity>
+        <activity android:name=".view.ritik.ritiik" />
+        <activity
+            android:name=".view.profile.profile"
+            android:label="@string/title_activity_profile"></activity>
     </application>
 
 </manifest>

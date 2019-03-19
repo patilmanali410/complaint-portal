@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <resources>
+        <color android:name="colorPrimary">#278be3</color>
+        <color android:name="colorPrimaryDark">#0f5998</color>
+        <color android:name="colorAccent">#4075a2</color>
+        <color android:name="colorNavIcon">#dae9f6</color>
+        <color android:name="colorNavText">#01294b</color>
+    </resources>
+</LinearLayout>
+
+
+
