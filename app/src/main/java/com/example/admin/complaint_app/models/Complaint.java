@@ -3,56 +3,85 @@ package com.example.admin.complaint_app.models;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.util.Date;
+
 public class Complaint  {
-    @SerializedName("complaint_id")      //to match with the actual database field name
-    @Expose
-    private int complaint_id;
 
-    @SerializedName("complaintTitle")
-    @Expose
-    private String complaintTitle;
+    private String complaint_id;
 
-    @SerializedName("complaintDescription")
-    @Expose
-    private String complaintDescription;
+    private int totalVotes;
 
-    @SerializedName("student_id")
-    @Expose
-    private int student_id;
+    private Source source;
 
-    @SerializedName("numberOfVotes")
-    @Expose
-    private int numberOfVotes;
+    private String title;
 
-    public int getComplaint_id() {
+    private String description;
+
+    //String image;
+
+    private Status status;
+
+    private Date date;
+
+    private Vote vote;
+
+    public void setTotalVotes(int totalVotes) {
+        this.totalVotes = totalVotes;
+    }
+
+    public void setSource(Source source) {
+        this.source = source;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public void setVote(Vote vote) {
+        this.vote = vote;
+    }
+
+    public String getComplaint_id() {
         return complaint_id;
     }
 
-    public String getComplaintTitle() {
-        return complaintTitle;
+    public int getTotalVotes() {
+        return totalVotes;
     }
 
-    public String getComplaintDescription() {
-        return complaintDescription;
+    public Source getSource() {
+        return source;
     }
 
-    public int getStudent_id() {
-        return student_id;
+    public String getTitle() {
+        return title;
     }
 
-    public int getNumberOfVotes() {
-        return numberOfVotes;
+    public String getDescription() {
+        return description;
     }
 
-    public void setComplaintTitle(String complaintTitle) {
-        this.complaintTitle = complaintTitle;
+    public Status getStatus() {
+        return status;
     }
 
-    public void setComplaintDescription(String complaintDescription) {
-        this.complaintDescription = complaintDescription;
+    public Date getDate() {
+        return date;
     }
 
-    public void setNumberOfVotes(int numberOfVotes) {
-        this.numberOfVotes = numberOfVotes;
+    public Vote getVote() {
+        return vote;
     }
 }

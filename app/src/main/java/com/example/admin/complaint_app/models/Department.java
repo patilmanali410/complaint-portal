@@ -4,20 +4,15 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class Department {
-    @SerializedName("department_id")
-    @Expose
-    private int department_id;
 
-    @SerializedName("departmentName")
-    @Expose
+    private String department_id;
+
     private String departmentName;
 
-    @SerializedName("HOD")
-    @Expose
-    private String HOD;
+    private String HODname;
 
 
-    public int getDepartment_id() {
+    public String getDepartment_id() {
         return department_id;
     }
 
@@ -26,7 +21,13 @@ public class Department {
     }
 
     public String getHOD() {
-        return HOD;
+        return HODname;
+    }
+
+
+
+    public void setDepartment_id(String department_id) {
+        this.department_id = department_id;
     }
 
     public void setDepartmentName(String departmentName) {
@@ -34,6 +35,6 @@ public class Department {
     }
 
     public void setHOD(String HOD) {
-        this.HOD = HOD;
+        this.HODname = HOD;
     }
 }

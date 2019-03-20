@@ -31,9 +31,9 @@ public class ComplaintViewModelHelper {
                 }
                 List<Complaint> complaints=response.body();
                 for(Complaint c :complaints){
-                    complaint.setComplaintDescription(c.getComplaintDescription());
-                    complaint.setComplaintTitle(c.getComplaintTitle());
-                    complaint.setNumberOfVotes(c.getNumberOfVotes());
+                    //complaint.setComplaintDescription(c.getComplaintDescription());
+                    //complaint.setComplaintTitle(c.getComplaintTitle());
+                    //complaint.setNumberOfVotes(c.getNumberOfVotes());
                 }
             }
 

@@ -12,8 +12,8 @@ public class ComplaintViewModel extends ViewModel {
     private ComplaintViewModelHelper complaintViewModelHelper;
 
     public Complaint getComplaintVal(){
-        if (complaint==null){
-            complaintViewModelHelper.getComplaint();
+        if (complaint == null){
+            complaint = complaintViewModelHelper.getComplaint();
         }
 
         return complaint;           //this can be assed in view...
