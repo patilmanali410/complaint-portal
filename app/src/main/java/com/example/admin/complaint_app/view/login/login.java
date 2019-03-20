@@ -27,7 +27,7 @@ public class login extends AppCompatActivity {
     }
 
     public void openProfilepage(){
-        Intent intent=new Intent(this,profile.class);
+        Intent intent=new Intent(this, profile.class);
         startActivity(intent);
     }
 }
