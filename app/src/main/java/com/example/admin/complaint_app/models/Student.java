@@ -10,7 +10,7 @@ public class Student {
 
     private String studentYear;
 
-    private long studentContact;
+    private Number studentContact;
 
     public void setStudent_id(String student_id) {
         this.student_id = student_id;
@@ -48,7 +48,7 @@ public class Student {
         return studentYear;
     }
 
-    public long getStudentContact() {
+    public Number getStudentContact() {
         return studentContact;
     }
 }

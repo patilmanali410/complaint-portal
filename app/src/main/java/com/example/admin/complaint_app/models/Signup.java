@@ -4,9 +4,8 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class Signup {
-    @SerializedName("student_id")
-    @Expose
-    private int student_id;
+
+    private String student_id;
 
     @SerializedName("name")
     @Expose
@@ -22,9 +21,9 @@ public class Signup {
 
     @SerializedName("contactNumber")
     @Expose
-    private long contactNumber;
+    private Number contactNumber;
 
-    public int getStudent_id() {
+    public String getStudent_id() {
         return student_id;
     }
 
@@ -40,11 +39,11 @@ public class Signup {
         return password;
     }
 
-    public long getContactNumber() {
+    public Number getContactNumber() {
         return contactNumber;
     }
 
-    public void setStudent_id(int student_id) {
+    public void setStudent_id(String student_id) {
         this.student_id = student_id;
     }
 
