@@ -8,14 +8,6 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import com.example.admin.complaint_app.R;
-import com.example.admin.complaint_app.view.profile.HomeFragment;
-import com.example.admin.complaint_app.view.profile.DashboardFragment;
-import com.example.admin.complaint_app.view.profile.NotificationsFragment;
-import com.example.admin.complaint_app.view.profile.ProfileFragment;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.LinearLayoutManager;
-import java.util.List;
-import java.util.ArrayList;
 
 //implement the interface OnNavigationItemSelectedListener in your activity class
 public class profile extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
@@ -28,7 +20,7 @@ public class profile extends AppCompatActivity implements BottomNavigationView.O
         setContentView(R.layout.activity_profile);
 
         //loading the default fragment
-        loadFragment(new HomeFragment());
+        loadFragment(new ViewComplaintsFragment());
 
         //getting bottom navigation view and attaching the listener
         BottomNavigationView navigation = findViewById(R.id.navigation);
@@ -45,15 +37,15 @@ public class profile extends AppCompatActivity implements BottomNavigationView.O
 
         switch (item.getItemId()) {
             case R.id.navigation_home:
-                fragment = new HomeFragment();
+                fragment = new ViewComplaintsFragment();
                 break;
 
             case R.id.navigation_dashboard:
-                fragment = new DashboardFragment();
+                fragment = new FileComplaintFragment();
                 break;
 
             case R.id.navigation_notifications:
-                fragment = new NotificationsFragment();
+                fragment = new ViewStatusFragment();
                 break;
 
             case R.id.navigation_profile:
