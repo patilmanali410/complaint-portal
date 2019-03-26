@@ -28,7 +28,7 @@ public class Student {
         this.studentYear = studentYear;
     }
 
-    public void setStudentContact(long studentContact) {
+    public void setStudentContact(Number studentContact) {
         this.studentContact = studentContact;
     }
 

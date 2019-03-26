@@ -1,4 +1,6 @@
 package com.example.admin.complaint_app.api;
+import android.util.Log;
+
 import java.security.cert.CertificateException;
 
 import javax.net.ssl.HostnameVerifier;
@@ -15,16 +17,18 @@ import retrofit2.converter.gson.GsonConverterFactory;
 //creating retrofit instance and providing base url to connect to server
 public class ApiClient {
 
-    public static final String BASE_URL=" ";
+    public static final String BASE_URL="http://10.0.2.2:8000/";
     public static Retrofit retrofit;
 
     public  Retrofit getApiClient(){
         if(retrofit==null){
+            Log.d("retrofit"," is statement retrofit onject");
             retrofit=new Retrofit.Builder().baseUrl(BASE_URL)
                     .client(getUnsafeOkHttpClient().build())
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
         }
+        Log.d("retrofit","retrofit onject");
         return retrofit;
     }
 

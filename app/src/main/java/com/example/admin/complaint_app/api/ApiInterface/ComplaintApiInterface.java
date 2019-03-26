@@ -12,4 +12,5 @@ public interface ComplaintApiInterface {
     @GET("complaints")    //BASE_URL/complaints
     Call<List<Complaint>> getcomplaint();
 
+
 }
