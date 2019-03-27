@@ -8,6 +8,10 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import com.example.admin.complaint_app.R;
+import com.example.admin.complaint_app.view.profile.mFragments.FileComplaintFragment;
+import com.example.admin.complaint_app.view.profile.mFragments.ProfileFragment;
+import com.example.admin.complaint_app.view.profile.mFragments.ViewComplaintsFragment;
+import com.example.admin.complaint_app.view.profile.mFragments.ViewStatusFragment;
 
 //implement the interface OnNavigationItemSelectedListener in your activity class
 public class profile extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {

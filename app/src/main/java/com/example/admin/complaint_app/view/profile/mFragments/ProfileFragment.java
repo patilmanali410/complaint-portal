@@ -1,4 +1,4 @@
-package com.example.admin.complaint_app.view.profile;
+package com.example.admin.complaint_app.view.profile.mFragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -12,7 +12,7 @@ import com.example.admin.complaint_app.R;
  * Created by Belal on 1/23/2018.
  */
 
-public class ViewStatusFragment extends Fragment {
+public class ProfileFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -20,6 +20,6 @@ public class ViewStatusFragment extends Fragment {
         //with the fragment you want to inflate
         //like if the class is HomeFragment it should have R.layout.home_fragment
         //if it is DashboardFragment it should have R.layout.fragment_dashboard
-        return inflater.inflate(R.layout.fragment_viewstatus, null);
+        return inflater.inflate(R.layout.fragment_profile, null);
     }
 }
