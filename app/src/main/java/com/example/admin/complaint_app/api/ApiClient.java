@@ -28,7 +28,7 @@ public class ApiClient {
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
         }
-        Log.d("retrofit","retrofit onject");
+        Log.d("retrofit","1st retrofit onject");
         return retrofit;
     }
 

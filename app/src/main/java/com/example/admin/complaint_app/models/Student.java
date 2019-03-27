@@ -2,15 +2,15 @@ package com.example.admin.complaint_app.models;
 
 public class Student {
 
-    private String student_id;
+    public String student_id;
 
-    private String studentName;
+    public String studentName;
 
-    private String studentDepartment;
+    public String studentDepartment;
 
-    private String studentYear;
+    public String studentYear;
 
-    private Number studentContact;
+    public Number studentContact;
 
     public void setStudent_id(String student_id) {
         this.student_id = student_id;
