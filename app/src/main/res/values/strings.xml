@@ -5,7 +5,7 @@
     <string name="signup_here">Signup Here</string>
 
     <string name="login_here">LOGIN HERE</string>
-    <string name="signup">SIGNUP</string>
+    <string name="studentSignup">SIGNUP</string>
     <string name="not_yet_registered">not yet registered</string>
     <string name="nameofstudent">TextView</string>
     <string name="idno">TextView</string>
@@ -21,6 +21,14 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+
+<!--validation error-->
+    <string name="nameerr">Enter your Name</string>
+    <string name="emailerr">Enter Email</string>
+    <string name="passnotmatcherr">Password doesn;t match</string>
+    <string name="passworderr">Enter password</string>
+    <string name="contacterr">Enter Contact Number</string>
+    <string name="iderr">Enter College ID Number</string>
 
 
 </resources>
