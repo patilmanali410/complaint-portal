@@ -3,7 +3,7 @@ package com.example.admin.complaint_app.models;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Signup {
+public class StudentSignup {
 
     private String student_id;
 
@@ -21,7 +21,7 @@ public class Signup {
 
     @SerializedName("contactNumber")
     @Expose
-    private Number contactNumber;
+    private String contactNumber;
 
     public String getStudent_id() {
         return student_id;
@@ -39,7 +39,7 @@ public class Signup {
         return password;
     }
 
-    public Number getContactNumber() {
+    public String getContactNumber() {
         return contactNumber;
     }
 
@@ -59,7 +59,7 @@ public class Signup {
         this.password = password;
     }
 
-    public void setContactNumber(long contactNumber) {
+    public void setContactNumber(String contactNumber) {
         this.contactNumber = contactNumber;
     }
 }

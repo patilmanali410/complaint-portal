@@ -2,7 +2,7 @@ package com.example.admin.complaint_app.models;
 
 public class Student {
 
-    public String student_id;
+    public Number student_id;
 
     public String studentName;
 
@@ -12,7 +12,7 @@ public class Student {
 
     public Number studentContact;
 
-    public void setStudent_id(String student_id) {
+    public void setStudent_id(Number student_id) {
         this.student_id = student_id;
     }
 
@@ -32,7 +32,7 @@ public class Student {
         this.studentContact = studentContact;
     }
 
-    public String getStudent_id() {
+    public Number getStudent_id() {
         return student_id;
     }
 
