@@ -3,11 +3,13 @@ package com.example.admin.complaint_app.view.main;
 import android.arch.lifecycle.ViewModelProvider;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,6 +29,15 @@ public class MainActivity extends AppCompatActivity {
     private Button login_button;
     private Button signup_button;
 
+    RelativeLayout rellay1;
+    Handler handler=new Handler();
+    Runnable runnable=new Runnable() {
+        @Override
+        public void run() {
+            rellay1.setVisibility(View.VISIBLE);
+        }
+    };
+
 
 
     public List<Student> studentsArray=new ArrayList<Student>();
@@ -35,6 +46,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        rellay1=(RelativeLayout) findViewById(R.id.rellaym1);
+        handler.postDelayed(runnable,2000);
 
 
         login_button =(Button)findViewById(R.id.loginbutton);
