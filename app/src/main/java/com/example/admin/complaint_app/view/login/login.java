@@ -21,10 +21,9 @@ public class login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
         collegeId=(EditText)findViewById(R.id.collegeid);
         password=(EditText)findViewById(R.id.loginpassword);
-
-
 
         login_button =(Button)findViewById(R.id.dologin);
 
@@ -34,6 +33,7 @@ public class login extends AppCompatActivity {
                 password1=password.getText().toString();
 
                 Log.d("login","data is"+collegeId1+" "+password1);
+                //validate users
                 openProfilepage();
             }
         });
