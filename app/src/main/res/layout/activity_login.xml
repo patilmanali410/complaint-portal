@@ -122,7 +122,6 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="50dp"
                 android:fontFamily="sans-serif-medium"
-
                 android:textColor="@color/white"
                 android:text="LOGIN"
                 android:paddingLeft="70dp"
