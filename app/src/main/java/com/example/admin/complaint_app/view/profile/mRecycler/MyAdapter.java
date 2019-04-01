@@ -20,6 +20,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyHolder> {
         this.complaints=complaints;
     }
 
+
     @NonNull
     @Override
     public MyHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {

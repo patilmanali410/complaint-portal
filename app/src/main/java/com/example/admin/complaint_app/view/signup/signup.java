@@ -14,8 +14,6 @@ import com.basgeekball.awesomevalidation.AwesomeValidation;
 import com.basgeekball.awesomevalidation.ValidationStyle;
 import com.example.admin.complaint_app.R;
 
-import com.example.admin.complaint_app.api.ApiClient;
-import com.example.admin.complaint_app.api.ApiInterface.SignupApi;
 import com.example.admin.complaint_app.models.StudentSignup;
 import com.example.admin.complaint_app.view.login.login;
 
@@ -30,7 +28,6 @@ public class signup extends AppCompatActivity {
     EditText name,email,collegeID,password,mobileNo;
     String name1,email1,collegeID1,password1,mobileNo1;
     Button submit;
-    StudentSignup studentSignup=new StudentSignup();
     AwesomeValidation awesomeValidation;
 
     @Override
@@ -53,20 +50,13 @@ public class signup extends AppCompatActivity {
 
     private void updateUI() {
         Log.d("retrofit","isnnide updateUI");
-
         String regexPassword = "(?=.[a-z])(?=.[A-Z])(?=.[\\d])(?=.[~`!@#\\$%\\^&\\*\\(\\)\\-_\\+=\\{\\}\\[\\]\\|\\;:\"<>,./\\?]).{8,}";
         awesomeValidation.addValidation(signup.this,R.id.entername,"[a-zA-Z\\s]+",R.string.nameerr);
         awesomeValidation.addValidation(signup.this,R.id.enteremailid, Patterns.EMAIL_ADDRESS,R.string.emailerr);
-
         awesomeValidation.addValidation(signup.this,R.id.loginpassword,regexPassword,R.string.passworderr);
         awesomeValidation.addValidation(signup.this,R.id.entermobileno,"[0-9]{10}",R.string.contacterr);
-
         //validation for college id from database---------------------------------------------------
-
         awesomeValidation.addValidation(signup.this, R.id.enterid,"[0-9]{9}",R.string.iderr);
-
-
-
         submit.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -78,9 +68,7 @@ public class signup extends AppCompatActivity {
                 collegeID1=collegeID.getText().toString();
 
                 if(awesomeValidation.validate()){
-                    //Inserting data into database
-                    insetStudentData();
-
+                    //add student to database
                     //open profileactivity
                     openProfile();
 
@@ -92,38 +80,6 @@ public class signup extends AppCompatActivity {
         });
     }
 
-
-
-    private void insetStudentData() {
-        Log.d("insertdata","name-->"+name);
-        studentSignup.setName(name1);
-        studentSignup.setEmail(email1);
-        studentSignup.setStudent_id(collegeID1);
-        studentSignup.setPassword(password1);
-        studentSignup.setContactNumber(mobileNo1);
-
-        Log.d("insertdata","data is"+studentSignup.getName());
-
-        ApiClient apiClient= new ApiClient();
-        Retrofit retrofit= apiClient.getApiClient();
-        SignupApi signupApi= retrofit.create(SignupApi.class);
-
-        signupApi.addStudent(studentSignup).enqueue(new Callback<StudentSignup>() {
-            @Override
-            public void onResponse(Call<StudentSignup> call, Response<StudentSignup> response) {
-                if(response.isSuccessful()){
-                    Log.d("insertdata","data inseted"+response.code());
-                    StudentSignup studentSignupresponse=response.body();
-                    Log.d("insertdata","response"+studentSignupresponse);
-                }
-            }
-            @Override
-            public void onFailure(Call<StudentSignup> call, Throwable t) {
-                Log.d("insertdata","erro"+t.getMessage());
-            }
-        });
-
-    }
 
     private void openProfile() {
         Intent intent=new Intent(this,login.class);
