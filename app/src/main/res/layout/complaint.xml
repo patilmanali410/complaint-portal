@@ -1,73 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<android.support.v7.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:layout_height="200dp"
-    card_view:cardCornerRadius="20dp">
+    android:layout_height="wrap_content">
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+    <android.support.v7.widget.CardView
+        android:id="@+id/main_blog_post"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/card_view_image"
+        <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="wrap_content">
 
-            android:adjustViewBounds="true"
-            android:scaleType="fitCenter"/>
-
-        <TextView
-            android:id="@+id/card_view_image_complaint_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_gravity="center_horizontal"
-            android:textSize="20dp"
-            android:layout_marginLeft="5dp"
-            android:text="Complaint Title"/>
-
-        <TextView
-            android:id="@+id/complaint_description"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/card_view_image"
-            android:text="Complaint Description"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="5dp"
-            android:textColor="@color/colorPrimaryDark"
-            android:fontFamily="sans-serif-medium"
-            android:textSize="15sp"/>
-        <TextView
-            android:id="@+id/total_votes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/complaint_description"
-            android:text="total votes:60"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="5dp"
-            android:textColor="@color/colorPrimaryDark"
-            android:fontFamily="sans-serif-medium"
-            android:textSize="15sp"/>
-
-        <TextView
-            android:id="@+id/date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/total_votes"
-            android:text="date:31/03/2019"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="5dp"
-            android:textColor="@color/colorPrimaryDark"
-            android:fontFamily="sans-serif-medium"
-            android:textSize="15sp"
-            />
-
-    </RelativeLayout>
+            <ImageView
+                android:id="@+id/blog_like_btn"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/blog_desc"
+                app:srcCompat="@drawable/ic_thumb_up_black_24dp" />
 
 
-</android.support.v7.widget.CardView>
 
+            <TextView
+                android:id="@+id/blog_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:text="Complaint Title"
+                android:textStyle="bold"
+
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/blog_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft= "8dp"
+                android:text="Complaint Post Date"
+
+                app:layout_constraintTop_toBottomOf="@+id/blog_user_name" />
+
+            <ImageView
+                android:id="@+id/blog_image"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="16dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/blog_date"
+                app:srcCompat="@drawable/grad_bg"/>
+
+            <TextView
+                android:id="@+id/blog_desc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="Description:olor sit amet, soluta regione urbanitas vis in, qui elit populo ut. "
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/blog_image" />
+
+            <TextView
+                android:id="@+id/blog_like_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="0 Votes"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/blog_like_btn"
+                app:layout_constraintTop_toBottomOf="@+id/blog_desc" />
+
+
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+
+</android.support.constraint.ConstraintLayout>

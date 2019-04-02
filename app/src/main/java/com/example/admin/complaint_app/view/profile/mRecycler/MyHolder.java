@@ -12,7 +12,7 @@ public class MyHolder extends RecyclerView.ViewHolder {
 
     public MyHolder(View itemView){
         super(itemView);
-        nametxt=(TextView) itemView.findViewById(R.id.card_view_image_complaint_title);
+        nametxt=(TextView) itemView.findViewById(R.id.blog_user_name);
 
     }
 }
