@@ -45,7 +45,15 @@ dependencies {
 
     //awesome validarion
     implementation 'com.basgeekball:awesome-validation:4.2'
+    //firebase
+    implementation 'com.google.firebase:firebase-core:16.0.1'
+
+    //realtimedatabse
+    implementation 'com.google.firebase:firebase-database:16.0.1'
+    implementation 'com.google.firebase:firebase-auth:16.0.2'
+
 
 
 
 }
+apply plugin: 'com.google.gms.google-services'

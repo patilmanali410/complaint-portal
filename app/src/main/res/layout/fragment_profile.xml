@@ -11,13 +11,13 @@
         android:layout_height="200dp"
         card_view:cardCornerRadius="4dp">
 
-    <TextView
-        android:id="@+id/info_text"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Manali Patil"
-        android:textSize="40dp"
-        android:textAlignment="center"/>
+        <TextView
+            android:id="@+id/info_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Ritik Jain"
+            android:textAlignment="center"
+            android:textSize="40dp" />
 
 
     <TextView

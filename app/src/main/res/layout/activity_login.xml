@@ -64,7 +64,7 @@
                         android:textSize="15sp" />
 
                     <EditText
-                        android:id="@+id/collegeid"
+                        android:id="@+id/emailid"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:background="@drawable/et_bg"
@@ -139,6 +139,23 @@
 
     </RelativeLayout>
 
-
+    <ProgressBar
+        android:id="@+id/loginprogress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="77dp"
+        android:indeterminate="true"
+        android:visibility="invisible" />
 
 </RelativeLayout>
