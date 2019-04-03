@@ -122,17 +122,27 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="50dp"
                 android:fontFamily="sans-serif-medium"
-
                 android:textColor="@color/white"
                 android:text="LOGIN"
                 android:paddingLeft="70dp"
                 android:paddingRight="70dp"
                 android:textAllCaps="false"
-
+                android:backgroundTint="@color/colorPrimaryDark"
                 android:textSize="16sp"
 
                  />
-
+            <TextView
+                android:id="@+id/gotosignup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dologin"
+                android:layout_marginTop="80dp"
+                android:text="<- go to signup page"
+                android:textAllCaps="true"
+                android:textSize="15sp"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/white"
+                />
 
         </RelativeLayout>
 

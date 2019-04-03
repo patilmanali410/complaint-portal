@@ -31,6 +31,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
     private Button login_button;
     private Button signup_button;
+    FirebaseAuth mAuth;
 
     RelativeLayout rellay1;
     Handler handler=new Handler();
@@ -47,27 +48,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mAuth=FirebaseAuth.getInstance();
 
 
         rellay1=(RelativeLayout) findViewById(R.id.rellaym1);
         handler.postDelayed(runnable,2000);
 
-
-       // login_button =(Button)findViewById(R.id.loginbutton);
-       // signup_button =(Button)findViewById(R.id.signupbutton);
-
-       /* signup_button.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                openSignuppage();
-            }
-        });
-
-        login_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openLoginpage();
-            }
-        });*/
     }
 
     @Override
@@ -76,11 +62,13 @@ public class MainActivity extends AppCompatActivity {
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
         if (currentUser == null) {
             //start login page
+            Log.d("login","null user main activutu");
             sendToLogin();
         }
         else {
             // user is signed in send to profile page
-           // sendToProfile();
+            Log.d("login","inside main logged in");
+           sendToProfile();
         }
     }
 
