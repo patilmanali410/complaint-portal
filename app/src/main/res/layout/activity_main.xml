@@ -22,7 +22,8 @@
             android:layout_height="80dp"
             android:src="@drawable/ic_school_black_24dp"
             android:adjustViewBounds="true"
-            android:scaleType="fitCenter"/>
+            android:scaleType="fitCenter"
+            />
 
         <RelativeLayout
             android:id="@+id/rellaym1"
