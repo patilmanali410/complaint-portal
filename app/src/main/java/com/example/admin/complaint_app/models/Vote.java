@@ -7,4 +7,6 @@ public class Vote {
     private String complaint_id;
 
     private String department_id;
+
+
 }
