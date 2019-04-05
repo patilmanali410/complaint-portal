@@ -5,16 +5,14 @@ import com.google.gson.annotations.SerializedName;
 
 public class Department {
 
-    private String department_id;
+    //private String department_id;
 
     private String departmentName;
 
     private String HODname;
 
 
-    public String getDepartment_id() {
-        return department_id;
-    }
+
 
     public String getDepartmentName() {
         return departmentName;
@@ -24,10 +22,9 @@ public class Department {
         return HODname;
     }
 
-
-
-    public void setDepartment_id(String department_id) {
-        this.department_id = department_id;
+    public Department(String departmentName, String HODname) {
+        this.departmentName = departmentName;
+        this.HODname = HODname;
     }
 
     public void setDepartmentName(String departmentName) {

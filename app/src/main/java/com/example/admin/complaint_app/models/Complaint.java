@@ -7,7 +7,6 @@ import java.util.Date;
 
 public class Complaint  {
 
-    private String complaint_id;
 
     private int totalVotes;
 
@@ -21,9 +20,17 @@ public class Complaint  {
 
     private Status status;
 
-    private Date date;
+    private String date;
 
-    private Vote vote;
+
+    public Complaint(int totalVotes, Source source, String title, String description, Status status, String date) {
+        this.totalVotes = totalVotes;
+        this.source = source;
+        this.title = title;
+        this.description = description;
+        this.status = status;
+        this.date = date;
+    }
 
     public void setTotalVotes(int totalVotes) {
         this.totalVotes = totalVotes;
@@ -45,17 +52,11 @@ public class Complaint  {
         this.status = status;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
-    public void setVote(Vote vote) {
-        this.vote = vote;
-    }
 
-    public String getComplaint_id() {
-        return complaint_id;
-    }
 
     public int getTotalVotes() {
         return totalVotes;
@@ -77,11 +78,8 @@ public class Complaint  {
         return status;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public Vote getVote() {
-        return vote;
-    }
 }

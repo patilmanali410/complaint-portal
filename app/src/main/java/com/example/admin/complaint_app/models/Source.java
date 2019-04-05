@@ -6,6 +6,8 @@ public class Source {
 
     private Department department;
 
+
+
     public void setStudent(Student student) {
         this.student = student;
     }
@@ -17,6 +19,12 @@ public class Source {
     public Student getStudent() {
         return student;
     }
+
+    public Source(Student student, Department department) {
+        this.student = student;
+        this.department = department;
+    }
+
 
     public Department getDepartment() {
         return department;

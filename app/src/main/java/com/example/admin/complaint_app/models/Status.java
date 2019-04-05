@@ -8,6 +8,13 @@ public class Status {
 
     private String statusDescription;
 
+
+    public Status(int level, String statusDescription) {
+        this.level = level;
+        this.statusDescription = statusDescription;
+    }
+
+
     public void setLevel(int level) {
         this.level = level;
     }
