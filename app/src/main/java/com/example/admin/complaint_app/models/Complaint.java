@@ -23,6 +23,10 @@ public class Complaint  {
     private String date;
 
 
+    public Complaint(){
+        //no-arg constructor
+    }
+
     public Complaint(int totalVotes, Source source, String title, String description, Status status, String date) {
         this.totalVotes = totalVotes;
         this.source = source;

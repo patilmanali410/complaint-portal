@@ -8,6 +8,9 @@ public class Status {
 
     private String statusDescription;
 
+    public Status(){
+
+    }
 
     public Status(int level, String statusDescription) {
         this.level = level;

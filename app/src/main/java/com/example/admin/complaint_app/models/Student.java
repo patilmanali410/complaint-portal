@@ -11,6 +11,10 @@ public class Student {
   public String year;
   public String contact;
 
+  public Student(){
+
+  }
+
     public Student(String id, String name, String email, String department, String year,String contact) {
         this.id = id;
         this.name = name;

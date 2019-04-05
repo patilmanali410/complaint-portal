@@ -8,11 +8,14 @@ import com.example.admin.complaint_app.R;
 
 public class MyHolder extends RecyclerView.ViewHolder {
 
-    TextView nametxt;
+    TextView complaintTitle,complaintDescription,complaintDate,complaintVotes;
 
     public MyHolder(View itemView){
         super(itemView);
-        nametxt=(TextView) itemView.findViewById(R.id.blog_user_name);
+        complaintTitle=(TextView) itemView.findViewById(R.id.blog_user_name);
+        complaintDescription=(TextView) itemView.findViewById(R.id.blog_desc);
+        complaintDate=(TextView) itemView.findViewById(R.id.blog_date);
+        complaintVotes=(TextView) itemView.findViewById(R.id.blog_like_count);
 
     }
 }

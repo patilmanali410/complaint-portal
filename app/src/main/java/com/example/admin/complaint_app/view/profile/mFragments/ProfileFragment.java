@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.admin.complaint_app.R;
@@ -35,6 +36,7 @@ public class ProfileFragment extends Fragment implements OnClickListener {
     DocumentReference docRef;
     String UID;
     TextView email1,name1,contact1,details1;
+    ProgressBar progressBar;
 
     @Nullable
     @Override
@@ -44,10 +46,12 @@ public class ProfileFragment extends Fragment implements OnClickListener {
         //like if the class is HomeFragment it should have R.layout.home_fragment
         //if it is DashboardFragment it should have R.layout.fragment_dashboard
         View v = inflater.inflate(R.layout.fragment_profile, container, false);
+
         email1=v.findViewById(R.id.student_email);
         name1=v.findViewById(R.id.student_name);
         contact1=v.findViewById(R.id.student_contact);
         details1=v.findViewById(R.id.student_coursedetails);
+        progressBar=v.findViewById(R.id.profileprogressBar);
 
 
         db=FirebaseFirestore.getInstance();
@@ -65,6 +69,7 @@ public class ProfileFragment extends Fragment implements OnClickListener {
     }
 
     private void getDetails() {
+        progressBar.setVisibility(View.VISIBLE);
         docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
@@ -72,8 +77,6 @@ public class ProfileFragment extends Fragment implements OnClickListener {
                     DocumentSnapshot document=task.getResult();
                     if(document.exists()){
                         updateUI(document);
-
-
                     }
                     else{
                         Log.d("document","No such Documnet");
@@ -83,6 +86,7 @@ public class ProfileFragment extends Fragment implements OnClickListener {
                     String error=task.getException().getMessage();
                     Log.d("document","error"+error);
                 }
+                progressBar.setVisibility(View.INVISIBLE);
             }
         });
     }

@@ -11,7 +11,9 @@ public class Department {
 
     private String HODname;
 
+    public Department(){
 
+    }
 
 
     public String getDepartmentName() {

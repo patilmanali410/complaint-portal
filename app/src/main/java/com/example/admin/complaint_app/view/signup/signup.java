@@ -180,13 +180,14 @@ public class signup extends AppCompatActivity {
             public void onComplete(@NonNull Task<Void> task) {
                 if(task.isSuccessful()){
                     Toast.makeText(getApplicationContext(),"Student Added Successfully",Toast.LENGTH_LONG).show();
-                    signupprogress.setVisibility(View.INVISIBLE);
+
                     sendToMain();
                 }
                 else{
                     String error=task.getException().getMessage();
                     Toast.makeText(getApplicationContext(),"error"+error,Toast.LENGTH_LONG).show();
                 }
+                signupprogress.setVisibility(View.INVISIBLE);
             }
         });
 
