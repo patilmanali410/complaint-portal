@@ -38,6 +38,7 @@ public class ViewComplaintsFragment extends Fragment {
     List<String> complaintDescription=new ArrayList<>();
     List<String> complaintDate=new ArrayList<>();
     List<String> complaintTotalVotes=new ArrayList<>();
+    List<String> imageUrl=new ArrayList<>();
     Complaint complaint;
 
 
@@ -68,10 +69,12 @@ public class ViewComplaintsFragment extends Fragment {
                     complaintDescription.add(complaint.getDescription());
                     complaintDate.add(complaint.getDate());
                     complaintTotalVotes.add(Integer.toString(complaint.getTotalVotes()));
+                    imageUrl.add(complaint.getImageUri());
+                    Log.d("imageurl","iamge url is "+imageUrl.get(0));
 
                 }
                 rv.setLayoutManager(new LinearLayoutManager(activity));
-                MyAdapter myAdapter=new MyAdapter(getContext(),complaintTitle,complaintDescription,complaintTotalVotes,complaintDate);
+                MyAdapter myAdapter=new MyAdapter(getContext(),complaintTitle,complaintDescription,complaintTotalVotes,complaintDate,imageUrl);
                 rv.setAdapter(myAdapter);
             }
         }).addOnFailureListener(new OnFailureListener() {

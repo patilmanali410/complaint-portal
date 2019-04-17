@@ -16,7 +16,7 @@ public class Complaint  {
 
     private String description;
 
-    //String image;
+    String imageUri;
 
     private Status status;
 
@@ -27,13 +27,14 @@ public class Complaint  {
         //no-arg constructor
     }
 
-    public Complaint(int totalVotes, Source source, String title, String description, Status status, String date) {
+    public Complaint(int totalVotes, Source source, String title, String description, Status status, String date,String imageUri) {
         this.totalVotes = totalVotes;
         this.source = source;
         this.title = title;
         this.description = description;
         this.status = status;
         this.date = date;
+        this.imageUri=imageUri;
     }
 
     public void setTotalVotes(int totalVotes) {
@@ -59,6 +60,8 @@ public class Complaint  {
     public void setDate(String date) {
         this.date = date;
     }
+
+    public void setImageUri(String imageUri){this.imageUri=imageUri;}
 
 
 
@@ -86,4 +89,5 @@ public class Complaint  {
         return date;
     }
 
+    public  String getImageUri() {return imageUri ;}
 }

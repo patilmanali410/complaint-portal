@@ -11,13 +11,12 @@
         android:id="@+id/pagetitle"
         android:layout_width="wrap_content"
         android:layout_height="32dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        android:layout_centerHorizontal="true"
         android:text="FILE COMPLAINT HERE"
-        android:textSize="24sp"
         android:textColor="@color/colorPrimaryDark"
-         />
+        android:textSize="24sp" />
 
     <CheckBox
         android:id="@+id/checkBox"
@@ -112,6 +111,16 @@
         android:textColor="@color/white"
         android:backgroundTint="@color/colorPrimaryDark"
         android:layout_below="@+id/enterdescription" />
+
+    <ProgressBar
+        android:id="@+id/imageprogressbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:indeterminate="true"
+        android:visibility="invisible" />
 
 
 </RelativeLayout>
