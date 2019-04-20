@@ -263,7 +263,7 @@ public class FileComplaintFragment extends Fragment implements OnClickListener {
                                 @Override
                                 public void onSuccess(Uri uri) {
                                     downloadUrl=uri.toString();
-                                    complaint = new Complaint(1, so, title1, description1, st, dateString, downloadUrl);
+                                    complaint = new Complaint(0, so, title1, description1, st, dateString, downloadUrl);
                                     db.collection("Complaints").add(complaint).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
                                         @Override
                                         public void onComplete(@NonNull Task<DocumentReference> task) {

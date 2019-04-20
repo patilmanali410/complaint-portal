@@ -16,25 +16,14 @@
         android:padding="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
-            <ImageView
-                android:id="@+id/blog_like_btn"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/blog_desc"
-                app:srcCompat="@drawable/ic_thumb_up_black_24dp" />
-
 
 
             <TextView
@@ -53,21 +42,17 @@
                 android:id="@+id/blog_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft= "8dp"
+                android:layout_marginLeft="8dp"
                 android:text="Complaint Post Date"
 
                 app:layout_constraintTop_toBottomOf="@+id/blog_user_name" />
 
             <ImageView
                 android:id="@+id/blog_image"
-                android:layout_width="0dp"
+                android:layout_width="395dp"
                 android:layout_height="200dp"
-                android:layout_marginTop="16dp"
                 android:scaleType="centerCrop"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/blog_date"
-                />
+                tools:layout_editor_absoluteY="78dp" />
 
             <TextView
                 android:id="@+id/blog_desc"
@@ -76,23 +61,45 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
                 android:text="Description:olor sit amet, soluta regione urbanitas vis in, qui elit populo ut. "
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/blog_image" />
+                app:layout_constraintTop_toBottomOf="@+id/blog_image"
+                app:layout_constraintVertical_bias="0.0" />
 
             <TextView
                 android:id="@+id/blog_like_count"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="51dp"
+                android:layout_height="19dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:layout_marginBottom="8dp"
                 android:text=""
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/blog_like_btn"
-                app:layout_constraintTop_toBottomOf="@+id/blog_desc" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.017"
+                app:layout_constraintStart_toEndOf="@+id/votebutton"
+                app:layout_constraintTop_toBottomOf="@+id/blog_desc"
+                app:layout_constraintVertical_bias="0.555" />
 
+            <Button
+                android:id="@+id/votebutton"
+                android:layout_width="81dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Vote"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.05"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/blog_desc" />
 
 
         </android.support.constraint.ConstraintLayout>

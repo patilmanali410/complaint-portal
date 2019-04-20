@@ -16,8 +16,10 @@
         android:padding="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
@@ -27,7 +29,8 @@
                 android:id="@+id/blog_like_btn"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
-                android:layout_marginLeft="16dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -36,71 +39,77 @@
                 app:srcCompat="@drawable/ic_thumb_up_black_24dp" />
 
 
-
             <TextView
                 android:id="@+id/blog_user_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
                 android:layout_marginTop="16dp"
                 android:text="Complaint Title"
                 android:textStyle="bold"
 
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="5dp" />
 
             <TextView
                 android:id="@+id/blog_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft= "8dp"
-                android:text="Complaint Post Date"
+                android:layout_marginStart="4dp"
 
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="12dp"
+                android:text="Complaint Post Date"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/blog_user_name" />
 
 
-            <com.kofigyan.stateprogressbar.StateProgressBar
-                android:id="@+id/your_state_progress_bar_id"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                app:spb_currentStateNumber="one"
-                app:spb_maxStateNumber="four"
-                app:spb_stateBackgroundColor="#BDBDBD"
-                app:spb_stateForegroundColor="#009688"
-                app:spb_stateNumberBackgroundColor="#808080"
-                app:spb_stateNumberForegroundColor="#eeeeee"
-                app:spb_currentStateDescriptionColor="#009688"
-                app:spb_stateDescriptionColor="#808080"
-                app:spb_animateToCurrentProgressState="true"
-                app:spb_checkStateCompleted="true"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/blog_date"/>
-
             <TextView
                 android:id="@+id/blog_desc"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="50dp"
-                android:layout_marginEnd="16dp"
-                android:text="Description:olor sit amet, soluta regione urbanitas vis in, qui elit populo ut. "
+                android:layout_width="371dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="Status Description"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/your_state_progress_bar_id" />
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
 
             <TextView
                 android:id="@+id/blog_like_count"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:layout_marginBottom="8dp"
                 android:text="1 votes"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/blog_like_btn"
-                app:layout_constraintTop_toBottomOf="@+id/blog_desc" />
+                app:layout_constraintTop_toBottomOf="@+id/blog_desc"
+                app:layout_constraintVertical_bias="0.428" />
 
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="Level:"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/blog_date" />
 
 
         </android.support.constraint.ConstraintLayout>

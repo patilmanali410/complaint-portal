@@ -21,13 +21,21 @@ public class MyStatusAdapter extends RecyclerView.Adapter<MyStatusHolder> {
     List<String> complaintDescription;
     List<String> complaintDate;
     List<String> complaintTotalVotes;
+    List<String> complaintLevel;
+    List<String> complaintStatusDescription;
+    final String level1="Complaint Filed Successfully";
+    final String level2="Viewed By HOD";
+    final String level3="Inprocess";
+    final String level4="Complaint Solved";
 
-    public MyStatusAdapter(Context c,List<String> complaintTitle, List<String> complaintDescription, List<String> complaintTotalVotes, List<String> complaintDate){
+    public MyStatusAdapter(Context c,List<String> complaintTitle, List<String> complaintDescription, List<String> complaintTotalVotes, List<String> complaintDate,List<String> complaintlevel,List<String> complaintStatusDescription){
         this.c=c;
         this.complaintTitle=complaintTitle;
         this.complaintDescription=complaintDescription;
         this.complaintDate=complaintDate;
         this.complaintTotalVotes=complaintTotalVotes;
+        this.complaintLevel=complaintlevel;
+        this.complaintStatusDescription=complaintStatusDescription;
     }
 
 
@@ -42,9 +50,21 @@ public class MyStatusAdapter extends RecyclerView.Adapter<MyStatusHolder> {
     @Override
     public void onBindViewHolder(@NonNull MyStatusHolder myStatusHolder, int i) {
         myStatusHolder.complaintTitle.setText(complaintTitle.get(i));
-        myStatusHolder.complaintDescription.setText(complaintDescription.get(i));
+        myStatusHolder.complaintDescription.setText("Status Description: "+complaintStatusDescription.get(i));
         myStatusHolder.complaintDate.setText(complaintDate.get(i));
         myStatusHolder.complaintVotes.setText(complaintTotalVotes.get(i)+" Votes");
+        if(complaintLevel.get(i).equals("1")){
+            myStatusHolder.level.setText("Level "+complaintLevel.get(i)+": "+level1);
+        }
+        if(complaintLevel.get(i).equals("2")){
+            myStatusHolder.level.setText("Level "+complaintLevel.get(i)+": "+level2);
+        }
+        if(complaintLevel.get(i).equals("3")){
+            myStatusHolder.level.setText("Level "+complaintLevel.get(i)+": "+level3);
+        }
+        if(complaintLevel.get(i).equals("4")){
+            myStatusHolder.level.setText("Level "+complaintLevel.get(i)+": "+level4);
+        }
 
 
 

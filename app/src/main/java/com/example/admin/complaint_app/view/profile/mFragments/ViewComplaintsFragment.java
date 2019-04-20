@@ -11,6 +11,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
+
 import com.example.admin.complaint_app.R;
 import com.example.admin.complaint_app.models.Complaint;
 import com.example.admin.complaint_app.models.Student;
@@ -40,6 +43,7 @@ public class ViewComplaintsFragment extends Fragment {
     List<String> complaintTotalVotes=new ArrayList<>();
     List<String> imageUrl=new ArrayList<>();
     Complaint complaint;
+    List<String> complaintID=new ArrayList<>();
 
 
     String[]  complaints={"complaint1","complaint2","complaint3","complaint4","complaint5","complaint6"};
@@ -50,12 +54,13 @@ public class ViewComplaintsFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_viewcomplaints, container, false);
         RecyclerView rv =rootView.findViewById(R.id.viewcomplaints);
 
-
         mAuth=FirebaseAuth.getInstance();
         db=FirebaseFirestore.getInstance();
         getComplaintData(rv,this.getActivity());
         return rootView;
     }
+
+
 
     private void getComplaintData(final RecyclerView rv, final FragmentActivity activity) {
         colRefComplaint=db.collection("Complaints");
@@ -63,6 +68,8 @@ public class ViewComplaintsFragment extends Fragment {
             @Override
             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
                 for(QueryDocumentSnapshot documentSnapshot:queryDocumentSnapshots){
+
+                    complaintID.add(documentSnapshot.getId());
                     complaint=documentSnapshot.toObject(Complaint.class);
                     Log.d("complaint","complaint title"+complaint.getTitle());
                     complaintTitle.add(complaint.getTitle());
@@ -74,7 +81,7 @@ public class ViewComplaintsFragment extends Fragment {
 
                 }
                 rv.setLayoutManager(new LinearLayoutManager(activity));
-                MyAdapter myAdapter=new MyAdapter(getContext(),complaintTitle,complaintDescription,complaintTotalVotes,complaintDate,imageUrl);
+                MyAdapter myAdapter=new MyAdapter(getContext(),complaintTitle,complaintDescription,complaintTotalVotes,complaintDate,imageUrl,complaintID);
                 rv.setAdapter(myAdapter);
             }
         }).addOnFailureListener(new OnFailureListener() {
@@ -83,6 +90,11 @@ public class ViewComplaintsFragment extends Fragment {
                 Log.d("complaint","error "+e.getMessage());
             }
         });
+    }
+
+
+    private void incrementVote() {
+        Log.d("vote","inside incrementvote");
     }
 
 }

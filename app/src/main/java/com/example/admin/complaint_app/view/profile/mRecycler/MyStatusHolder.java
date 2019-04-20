@@ -8,7 +8,7 @@ import com.example.admin.complaint_app.R;
 
 public class MyStatusHolder extends RecyclerView.ViewHolder {
 
-    TextView complaintTitle,complaintDescription,complaintDate,complaintVotes;
+    TextView complaintTitle,complaintDescription,complaintDate,complaintVotes,level;
 
 
     public MyStatusHolder(View itemView){
@@ -17,6 +17,7 @@ public class MyStatusHolder extends RecyclerView.ViewHolder {
         complaintDescription=(TextView) itemView.findViewById(R.id.blog_desc);
         complaintDate=(TextView) itemView.findViewById(R.id.blog_date);
         complaintVotes=(TextView) itemView.findViewById(R.id.blog_like_count);
+        level=(TextView) itemView.findViewById(R.id.textView);
 
     }
 }

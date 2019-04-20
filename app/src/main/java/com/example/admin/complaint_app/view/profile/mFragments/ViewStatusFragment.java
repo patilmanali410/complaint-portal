@@ -36,6 +36,7 @@ import java.util.List;
 
 public class ViewStatusFragment extends Fragment {
 
+
     FirebaseAuth mAuth;
     FirebaseFirestore db;
     CollectionReference colRefComplaint;
@@ -43,6 +44,9 @@ public class ViewStatusFragment extends Fragment {
     List<String> complaintDescription=new ArrayList<>();
     List<String> complaintDate=new ArrayList<>();
     List<String> complaintTotalVotes=new ArrayList<>();
+    List<String> complaintLevel=new ArrayList<>();
+    List<String> complaintStatusDescription=new ArrayList<>();
+
     Complaint complaint;
     StateProgressBar stateProgressBar;
     String[] descriptionData = {"Details", "Status", "Photo", "Confirm"};
@@ -80,10 +84,11 @@ public class ViewStatusFragment extends Fragment {
                     complaintDescription.add(complaint.getDescription());
                     complaintDate.add(complaint.getDate());
                     complaintTotalVotes.add(Integer.toString(complaint.getTotalVotes()));
-
+                    complaintLevel.add(Integer.toString(complaint.getStatus().getLevel()));
+                    complaintStatusDescription.add(complaint.getStatus().getStatusDescription());
                 }
                 rv.setLayoutManager(new LinearLayoutManager(activity));
-                MyStatusAdapter myStatusAdapter= new MyStatusAdapter(getContext(),complaintTitle,complaintDescription,complaintTotalVotes,complaintDate);
+                MyStatusAdapter myStatusAdapter= new MyStatusAdapter(getContext(),complaintTitle,complaintDescription,complaintTotalVotes,complaintDate,complaintLevel,complaintStatusDescription);
                 rv.setAdapter(myStatusAdapter);
             }
         }).addOnFailureListener(new OnFailureListener() {
